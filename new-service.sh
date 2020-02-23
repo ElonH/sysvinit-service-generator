@@ -34,8 +34,7 @@ prompt_token() {
   local VAL=""
   if [ "$3" = "" ]; then
     while [ "$VAL" = "" ]; do
-      echo -e -n "${2:-$1} : "
-      read -e -p -r VAL
+      read -e -p "${2:-$1} : " VAL
       if [ "$VAL" = "" ]; then
         echo -e "Please provide a value"
       fi
